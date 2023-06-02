@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+
+}
+
+html, body {
+    height: 100vh;
+}
+
+body {
+    background: hsl(30, 38%, 92%);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+main {
+
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.product, .product-img {
+    width: 50%;
+
+}
+
+.product-img {
+    background: hsl(228, 12%, 48%);
+    border-radius: 10px 0 0 10px;
+}
+
+.product {
+    padding: 0 2em;
+    background: white;
+    border-radius: 0 10px 10px 0;
+}
+
+.product-category {
+    margin-top: 1em;
+}
+
+.product-category__span {
+
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 0.2em;
+    font-size: 0.8rem;
+}
+
+.product-description {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1em;
+}
+
+.product-name {
+    line-height: 1em;
+    margin-top: 1rem;
+}
+
+.product-name, .product-price {
+    font-family: 'Fraunces', serif;
+}
+
+.product-price {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-price__new {
+    font-size: 2rem;
+    color: hsl(158, 36%, 37%);
+}
+
+.product-price__old {
+    font-size: 1rem;
+    color: hsla(228, 12%, 48%, 0.81);
+    text-decoration: line-through;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.add-to-cart {
+    margin: 2em 0;
+    padding: 1em;
+    width: 100%;
+    background: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;;
+}
+
+.add-to-cart:hover {
+    background: hsl(157, 37%, 21%);
+}
+
+.attribution {
+    font-size: 0.2em;
+    margin-top: 1em;
+}
+
+@media only screen and (max-width: 767px) {
+
+    main {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        height: 80vh;
+        width: 80%;
+    }
+
+    .product, .product-img {
+        width: 100%;
+    }
+
+    .product {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .product-img {
+        border-radius: 10px 10px 0 0;
+    }
+}
